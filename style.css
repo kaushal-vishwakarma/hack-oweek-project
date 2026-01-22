@@ -1,0 +1,114 @@
+
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+           
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #000003ea; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+       
+        .card-container {
+            display: flex;
+            width: 800px;
+            max-width: 100%;
+            background-color: #d5d2dd81; 
+            
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            overflow: hidden; 
+        }
+
+        .sidebar {
+            width: 28%; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-box {
+            flex: 1; 
+            overflow: hidden;
+            min-height: 100px;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+       
+        .menu-content {
+            width: 72%;
+            padding: 40px 50px;
+            font-family: 'Georgia', serif; 
+            color: #1a1a1a;
+        }
+
+        /* Header */
+        h1 {
+            font-family: 'Trebuchet MS', sans-serif; 
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            color: #000;
+        }
+
+        
+        .category {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #150574;
+        }
+
+        
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between; 
+            font-size: 1.15rem;
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+
+        .item-name {
+            font-weight: 500;
+            color: #380505;
+        }
+
+        .item-price {
+            font-weight: 500;
+            min-width: 60px; 
+            text-align: right;
+            color: #380505;
+        }
+
+        /* Footer Phone Number */
+        .footer-phone {
+            margin-top: 30px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #000;
+        }
+
+    
