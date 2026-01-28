@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="form-header">
+            <h1>TechNova 2024</h1>
+            <p>Student Registration Form</p>
+            <div class="event-info-banner">
+                <span>📅 March 24th - 26th, 2024</span>
+                <span>📍 Main Campus Auditorium</span>
+            </div>
+        </div>
+
+        <form action="#" method="post" class="registration-form">
+            
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. john@university.edu" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 123-456-7890">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Academic Information</legend>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="rollno">Roll Number / ID</label>
+                        <input type="text" id="rollno" name="rollno" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dept">Department</label>
+                        <select id="dept" name="dept" required>
+                            <option value="">Select Department</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="it">Information Tech</option>
+                            <option value="ece">Electronics (ECE)</option>
+                            <option value="mech">Mechanical</option>
+                            <option value="civil">Civil</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Year of Study</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="year" value="1" required> 1st Year</label>
+                        <label><input type="radio" name="year" value="2"> 2nd Year</label>
+                        <label><input type="radio" name="year" value="3"> 3rd Year</label>
+                        <label><input type="radio" name="year" value="4"> 4th Year</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Event Details</legend>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <label for="event-date">Preferred Date</label>
+                        <input type="date" id="event-date" name="event-date" min="2024-03-24" max="2024-03-26" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="venue-pref">Venue Block Preference</label>
+                        <select id="venue-pref" name="venue-pref">
+                            <option value="audi-a">Main Auditorium (Block A)</option>
+                            <option value="audi-b">Seminar Hall (Block B)</option>
+                            <option value="open-ground">Open Grounds</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-main">Main Event</label>
+                    <select id="event-main" name="event-main" required>
+                        <option value="">Choose an Event</option>
+                        <option value="hackathon">Coding Hackathon</option>
+                        <option value="robotics">RoboWars</option>
+                        <option value="debate">Open Debate</option>
+                        <option value="gaming">eSports Tournament</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Add-on Workshops (Optional)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="workshop" value="ai"> AI/ML Workshop</label>
+                        <label><input type="checkbox" name="workshop" value="cyber"> Cyber Security</label>
+                        <label><input type="checkbox" name="workshop" value="cloud"> Cloud Computing</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
