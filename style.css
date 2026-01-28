@@ -1,114 +1,190 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-       
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+:root {
+    --primary-color: #4a90e2; /* College Blue */
+    --secondary-color: #2c3e50; /* Dark Navy */
+    --accent-color: #e74c3c; /* Alert/Highlight */
+    --bg-color: #011113d8;
+    --card-bg: #ffffffd8;
+}
 
-        body {
-           
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #000003ea; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+body {
+    background-color: var(--bg-color);
+    color: #2e00fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
 
-       
-        .card-container {
-            display: flex;
-            width: 800px;
-            max-width: 100%;
-            background-color: #d5d2dd81; 
-            
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            overflow: hidden; 
-        }
+/* Main Container */
+.main-container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
-        .sidebar {
-            width: 28%; 
-            display: flex;
-            flex-direction: column;
-        }
+/* Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-        .img-box {
-            flex: 1; 
-            overflow: hidden;
-            min-height: 100px;
-        }
+.form-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        .img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-            display: block;
-        }
+.form-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
 
-       
-        .menu-content {
-            width: 72%;
-            padding: 40px 50px;
-            font-family: 'Georgia', serif; 
-            color: #1a1a1a;
-        }
+/* Form Layout */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-        /* Header */
-        h1 {
-            font-family: 'Trebuchet MS', sans-serif; 
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            color: #000;
-        }
+legend {
+    font-weight: bold;
+    color: var(--secondary-color);
+    padding: 0 10px;
+}
 
-        
-        .category {
-            margin-bottom: 25px;
-        }
+.form-group {
+    margin-bottom: 15px;
+}
 
-        h2 {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #150574;
-        }
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
 
-        
-        ul {
-            list-style: none;
-        }
+/* Inputs and Selects */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
 
-        li {
-            display: flex;
-            justify-content: space-between; 
-            font-size: 1.15rem;
-            margin-bottom: 3px;
-            line-height: 1.4;
-        }
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
 
-        .item-name {
-            font-weight: 500;
-            color: #380505;
-        }
+/* Side-by-side Layout for larger screens */
+.row {
+    display: flex;
+    gap: 20px;
+}
 
-        .item-price {
-            font-weight: 500;
-            min-width: 60px; 
-            text-align: right;
-            color: #380505;
-        }
+.row .form-group {
+    flex: 1;
+}
 
-        /* Footer Phone Number */
-        .footer-phone {
-            margin-top: 30px;
-            font-size: 2.2rem;
-            font-weight: bold;
-            font-family: 'Trebuchet MS', sans-serif;
-            color: #000;
-        }
+/* Radio and Checkbox Groups */
+.radio-group label,
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
 
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: var(--primary-color);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #357abd;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
     
+    .main-container {
+        padding: 20px;
+    }
+}
+/* --- Keep your previous CSS here --- */
+
+/* NEW: Styles for the Date/Info Banner */
+.event-info-banner {
+    background-color: #e3f2fd; /* Light Blue background */
+    color: var(--secondary-color);
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between Date and Venue text */
+    border: 1px dashed var(--primary-color);
+}
+
+.event-info-banner span {
+    font-weight: 600;
+}
+
+/* NEW: Specific styling for Date Input */
+input[type="date"] {
+    font-family: inherit;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Optional: Make the placeholder text for date easier to read */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.4); /* Changes icon color slightly */
+}
+
+/* Responsive adjustment for the banner */
+@media (max-width: 500px) {
+    .event-info-banner {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
